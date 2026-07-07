@@ -1,0 +1,23 @@
+# Dependencies and build output (rebuilt inside the image)
+node_modules
+.next
+out
+build
+coverage
+
+# Git and editor noise
+.git
+.github
+.cursor
+*.md
+!README.md
+
+# Local env — secrets are injected by Coolify at runtime / build time
+.env*
+!.env.local.example
+
+# Dev / CI artefacts
+npm-debug.log*
+.DS_Store
+.vercel
+*.tsbuildinfo

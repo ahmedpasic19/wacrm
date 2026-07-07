@@ -61,6 +61,10 @@ const SECURITY_HEADERS = [
 ] as const;
 
 const nextConfig: NextConfig = {
+  // Minimal production image for Docker / Coolify — copies only traced
+  // server deps into .next/standalone instead of the full node_modules.
+  output: "standalone",
+
   /**
    * Cache-Control policy.
    *
